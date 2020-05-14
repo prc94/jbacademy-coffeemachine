@@ -1,13 +1,6 @@
 package machine
 
-import machine.Machine.coffee
-import machine.Machine.cups
-import machine.Machine.milk
-import machine.Machine.money
-import machine.Machine.water
 import java.util.Scanner
-
-
 
 fun main() = Scanner(System.`in`).let { scn: Scanner ->
     do {
@@ -44,11 +37,11 @@ fun main() = Scanner(System.`in`).let { scn: Scanner ->
                 }
                 "remaining" -> {
                     println("The coffee machine has:")
-                    println("$water of water\n" +
-                            "$milk of milk\n" +
-                            "$coffee of coffee beans\n" +
-                            "$cups of disposable cups\n" +
-                            "\$$money of money")
+                    println("${Machine.water} of water\n" +
+                            "${Machine.milk} of milk\n" +
+                            "${Machine.coffee} of coffee beans\n" +
+                            "${Machine.cups} of disposable cups\n" +
+                            "\$${Machine.money} of money")
                 }
                 "exit" -> return@main
                 else -> Machine.interact(it)

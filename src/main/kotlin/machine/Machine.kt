@@ -1,7 +1,5 @@
 package machine
 
-import java.lang.IllegalArgumentException
-
 object Machine {
     var money = 550
         private set
